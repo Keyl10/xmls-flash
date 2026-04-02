@@ -1,10 +1,96 @@
+HTML
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>XMLS FLASH</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XMLS.FLASH</title>
+
+<style>
+body {
+  margin: 0;
+  background: #0a0a0a;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  text-align: center;
+}
+
+.card {
+  background: #141414;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.logo {
+  width: 120px;
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  background: #00ffcc;
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+</style>
+
 </head>
+
 <body>
-  <h1>Mi Token XMLS.FLASH 🚀</h1>
-  <p>Web en construcción</p>
+
+<div class="container">
+
+  <img src="logo.png" class="logo">
+
+  <h1>XMLS.FLASH</h1>
+
+  <p>
+    A decentralized utility token on Polygon focused on speed, liquidity, and security within a transparent multi-chain ecosystem.
+  </p>
+
+  <div class="card">
+    <h2>Contract</h2>
+    <p id="contract">0x3cd79b7dbbd4fb3e776ec7030109b376e3acabd6</p>
+    <button onclick="copy()">Copy Contract</button>
+  </div>
+
+  <div class="card">
+    <h2>Network</h2>
+    <p>Polygon</p>
+  </div>
+
+  <div class="card">
+    <h2>Buy Token</h2>
+    <p>Available on decentralized exchanges.</p>
+
+    <a href="https://dexscreener.com/polygon/0x3cd79b7dbbd4fb3e776ec7030109b376e3acabd6" target="_blank">
+      <button>View on Dexscreener</button>
+    </a>
+  </div>
+
+</div>
+
+<script>
+function copy() {
+  const text = document.getElementById("contract").innerText;
+  navigator.clipboard.writeText(text);
+  alert("Contract copied!");
+}
+</script>
+
 </body>
 </html>
