@@ -10,18 +10,16 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: white;
-
-  /* 🔥 NUEVO FONDO PRO */
   background: radial-gradient(circle at top, #0f172a, #020617 60%, #000000);
 }
 
-/* 🔥 EFECTO DE LUZ */
+/* EFECTO LUZ */
 body::before {
   content: "";
   position: fixed;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 20% 20%, rgba(0,255,204,0.15), transparent 40%);
+  background: radial-gradient(circle at 20% 20%, rgba(130,71,229,0.2), transparent 40%);
   pointer-events: none;
 }
 
@@ -31,11 +29,12 @@ nav {
   justify-content: center;
   gap: 20px;
   padding: 15px;
-  background: #111;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
 }
 
 nav a {
-  color: #00ffcc;
+  color: #8247E5;
   text-decoration: none;
   font-weight: bold;
 }
@@ -47,28 +46,27 @@ section {
 }
 
 h1 {
-  color: #00ffcc;
-  font-size: 40px;
+  color: #8247E5;
+  font-size: 42px;
 }
 
-/* CARDS */
+/* CARD */
 .card {
   background: rgba(255,255,255,0.05);
   padding: 20px;
   margin: 20px auto;
-  max-width: 600px;
+  max-width: 700px;
   border-radius: 12px;
   backdrop-filter: blur(10px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
 /* LOGO */
 .logo {
-  width: 150px;
+  width: 160px;
   border-radius: 12px;
   margin-bottom: 20px;
-  box-shadow: 0 0 20px #00ffcc;
-
-  /* 🔥 ANIMACIÓN */
+  box-shadow: 0 0 25px #8247E5;
   animation: float 3s ease-in-out infinite;
 }
 
@@ -80,18 +78,19 @@ h1 {
 
 /* BUTTON */
 button {
-  padding: 12px 18px;
-  background: #00ffcc;
+  padding: 12px 20px;
+  background: #8247E5;
   border: none;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
   margin-top: 10px;
+  color: white;
   transition: 0.3s;
 }
 
 button:hover {
-  background: #00ccaa;
+  background: #6d39c9;
   transform: scale(1.05);
 }
 </style>
@@ -119,7 +118,11 @@ button:hover {
   <h2>About</h2>
   <div class="card">
     <p>
-      A decentralized utility token focused on speed, liquidity and transparency within the Polygon ecosystem.
+      XMLS.FLASH is a decentralized utility token on Polygon designed for fast transactions, 
+      efficient liquidity, and transparent on-chain activity.
+    </p>
+    <p>
+      Metadata and assets are stored on IPFS for decentralized, tamper-proof access.
     </p>
   </div>
 </section>
@@ -127,9 +130,9 @@ button:hover {
 <section id="tokenomics">
   <h2>Tokenomics</h2>
   <div class="card">
-    <p>Total Supply: 1,000,000,000</p>
-    <p>Liquidity Locked</p>
-    <p>Low / Zero Tax (adjustable)</p>
+    <p>Total Supply: 680,000,000</p>
+    <p>Liquidity Active</p>
+    <p>Polygon Network</p>
   </div>
 </section>
 
@@ -137,8 +140,9 @@ button:hover {
   <h2>Roadmap</h2>
   <div class="card">
     <p>Phase 1: Launch</p>
-    <p>Phase 2: Listings</p>
-    <p>Phase 3: Growth</p>
+    <p>Phase 2: Liquidity Growth</p>
+    <p>Phase 3: Listings</p>
+    <p>Phase 4: Expansion</p>
   </div>
 </section>
 
@@ -147,11 +151,11 @@ button:hover {
   <div class="card">
     <p>Available on DEX</p>
 
-    <a href="https://dexscreener.com/polygon/0x3cd79b7dbbd4fb3e776ec7030109b376e3acabd6" target="_blank">
+    <a href="https://dexscreener.com/polygon/0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6" target="_blank">
       <button>View on Dexscreener</button>
     </a>
 
-    <p id="contract">0x3cd79b7dbbd4fb3e776ec7030109b376e3acabd6</p>
+    <p id="contract">0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6</p>
 
     <button onclick="copy()">Copy Contract</button>
   </div>
