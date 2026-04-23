@@ -9,7 +9,8 @@
    "name": "XMLS.FLASH",
    "symbol": "XMLS.FLASH",
    "decimals": 8,
-   "logoURI": "https://xmls-flash.vercel.app/logo.png"
+   "logoURI":
+"https://xmls-flash.vercel.app/xmlsflash-logo.png" 
   }
  ]
 }
