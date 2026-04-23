@@ -1,104 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>XMLS.FLASH</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: white;
-  background: radial-gradient(circle at top, #0f172a, #020617 60%, #000000);
-}
+  <title>XMLS.FLASH</title>
 
-/* EFECTO LUZ */
-body::before {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at 20% 20%, rgba(130,71,229,0.2), transparent 40%);
-  pointer-events: none;
-}
+  <!-- Open Graph (para compartir en redes) -->
+  <meta property="og:title" content="XMLS.FLASH">
+  <meta property="og:description" content="Decentralized utility token on Polygon designed for fast transactions, efficient liquidity and transparent on-chain activity.">
+  <meta property="og:image" content="https://ipfs.io/ipfs/bafkreigjteyuuc7343yipcmbl5gvdarijra3hvfsf7gk4zax5zsjalwicm">
+  <meta property="og:url" content="https://xmls-flash.vercel.app">
+  <meta property="og:type" content="website">
 
-/* NAV */
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 15px;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
-}
+  <style>
 
-nav a {
-  color: #8247E5;
-  text-decoration: none;
-  font-weight: bold;
-}
+  /* Fondo */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: radial-gradient(circle at top, #0f172a, #020617 60%, #000000);
+  }
 
-/* SECTIONS */
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
+  /* Efecto de luz */
+  body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 20%, rgba(130,71,229,0.2), transparent 40%);
+    pointer-events: none;
+  }
 
-h1 {
-  color: #8247E5;
-  font-size: 42px;
-}
+  /* Menú */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+  }
 
-/* CARD */
-.card {
-  background: rgba(255,255,255,0.05);
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 700px;
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-}
+  nav a {
+    color: #8247E5;
+    text-decoration: none;
+    font-weight: bold;
+  }
 
-/* LOGO */
-.logo {
-  width: 160px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 25px #8247E5;
-  animation: float 3s ease-in-out infinite;
-}
+  /* Secciones */
+  section {
+    padding: 60px 20px;
+    text-align: center;
+  }
 
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-}
+  h1 {
+    color: #8247E5;
+    font-size: 42px;
+  }
 
-/* BUTTON */
-button {
-  padding: 12px 20px;
-  background: #8247E5;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: 10px;
-  color: white;
-  transition: 0.3s;
-}
+  /* Tarjetas */
+  .card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  }
 
-button:hover {
-  background: #6d39c9;
-  transform: scale(1.05);
-}
-</style>
+  /* Logo */
+  .logo {
+    width: 160px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 25px #8247E5;
+    animation: float 3s ease-in-out infinite;
+  }
 
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+
+  /* Botones */
+  button {
+    padding: 12px 20px;
+    background: #8247E5;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    color: white;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    background: #6d39c9;
+    transform: scale(1.05);
+  }
+
+  </style>
 </head>
+
 
 <body>
 
+<!-- Menú -->
 <nav>
   <a href="#home">Home</a>
   <a href="#about">About</a>
@@ -107,66 +120,109 @@ button:hover {
   <a href="#buy">Buy</a>
 </nav>
 
+
+<!-- HOME -->
 <section id="home">
+
   <img src="https://fuchsia-generous-canid-667.mypinata.cloud/ipfs/bafkreigjteyuuc7343yipcmbl5gvdarijra3hvfsf7gk4zax5zsjalwicm" class="logo">
 
   <h1>XMLS.FLASH</h1>
   <p>Fast • Secure • Decentralized on Polygon</p>
+
 </section>
 
+
+<!-- ABOUT -->
 <section id="about">
   <h2>About</h2>
+
   <div class="card">
+
     <p>
-      XMLS.FLASH is a decentralized utility token on Polygon designed for fast transactions, 
+      XMLS.FLASH is a decentralized utility token on Polygon designed for fast transactions,
       efficient liquidity, and transparent on-chain activity.
     </p>
+
     <p>
-      Metadata and assets are stored on IPFS for decentralized, tamper-proof access.
+      Metadata and assets are stored on IPFS for decentralized access.
     </p>
+
   </div>
 </section>
 
+
+<!-- TOKENOMICS -->
 <section id="tokenomics">
+
   <h2>Tokenomics</h2>
+
   <div class="card">
     <p>Total Supply: 680,000,000</p>
     <p>Liquidity Active</p>
     <p>Polygon Network</p>
   </div>
+
 </section>
 
+
+<!-- ROADMAP -->
 <section id="roadmap">
+
   <h2>Roadmap</h2>
+
   <div class="card">
     <p>Phase 1: Launch</p>
     <p>Phase 2: Liquidity Growth</p>
     <p>Phase 3: Listings</p>
     <p>Phase 4: Expansion</p>
   </div>
+
 </section>
 
+
+<!-- BUY TOKEN -->
 <section id="buy">
+
   <h2>Buy Token</h2>
+
   <div class="card">
+
     <p>Available on DEX</p>
 
+    <!-- Chart -->
     <a href="https://dexscreener.com/polygon/0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6" target="_blank">
       <button>View on Dexscreener</button>
     </a>
 
-    <p id="contract">0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6</p>
+    <!-- Comprar -->
+    <a href="https://app.uniswap.org/#/swap?outputCurrency=0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6&chain=polygon" target="_blank">
+      <button>Buy on Uniswap</button>
+    </a>
+
+    <!-- Contrato -->
+    <p id="contract">
+      0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6
+    </p>
 
     <button onclick="copy()">Copy Contract</button>
+
   </div>
+
 </section>
 
+
 <script>
+
 function copy() {
+
   const text = document.getElementById("contract").innerText;
+
   navigator.clipboard.writeText(text);
+
   alert("Contract copied!");
+
 }
+
 </script>
 
 </body>
