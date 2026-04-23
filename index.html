@@ -2,228 +2,234 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>XMLS.FLASH</title>
+<title>XMLS.FLASH</title>
 
-  <!-- Open Graph (para compartir en redes) -->
-  <meta property="og:title" content="XMLS.FLASH">
-  <meta property="og:description" content="Decentralized utility token on Polygon designed for fast transactions, efficient liquidity and transparent on-chain activity.">
-  <meta property="og:image" content="https://ipfs.io/ipfs/bafkreigjteyuuc7343yipcmbl5gvdarijra3hvfsf7gk4zax5zsjalwicm">
-  <meta property="og:url" content="https://xmls-flash.vercel.app">
-  <meta property="og:type" content="website">
+<meta property="og:title" content="XMLS.FLASH">
+<meta property="og:description" content="Decentralized utility token on Polygon designed for fast transactions, efficient liquidity and transparent on-chain activity.">
+<meta property="og:image" content="https://ipfs.io/ipfs/bafkreigjteyuuc7343yipcmbl5gvdarijra3hvfsf7gk4zax5zsjalwicm">
+<meta property="og:url" content="https://xmls-flash.vercel.app">
+<meta property="og:type" content="website">
 
-  <style>
+<style>
 
-  /* Fondo */
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: white;
-    background: radial-gradient(circle at top, #0f172a, #020617 60%, #000000);
-  }
+/* Fondo */
 
-  /* Efecto de luz */
-  body::before {
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 20% 20%, rgba(130,71,229,0.2), transparent 40%);
-    pointer-events: none;
-  }
+body{
+margin:0;
+font-family:Arial, sans-serif;
+color:white;
+background:radial-gradient(circle at top,#0f172a,#020617 60%,#000000);
+}
 
-  /* Menú */
-  nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 15px;
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(10px);
-  }
+/* Efecto luz */
 
-  nav a {
-    color: #8247E5;
-    text-decoration: none;
-    font-weight: bold;
-  }
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background:radial-gradient(circle at 20% 20%,rgba(130,71,229,0.2),transparent 40%);
+pointer-events:none;
+}
 
-  /* Secciones */
-  section {
-    padding: 60px 20px;
-    text-align: center;
-  }
+/* Menu */
 
-  h1 {
-    color: #8247E5;
-    font-size: 42px;
-  }
+nav{
+display:flex;
+justify-content:center;
+gap:20px;
+padding:15px;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+}
 
-  /* Tarjetas */
-  .card {
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 700px;
-    border-radius: 12px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-  }
+nav a{
+color:#8247E5;
+text-decoration:none;
+font-weight:bold;
+}
 
-  /* Logo */
-  .logo {
-    width: 160px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 25px #8247E5;
-    animation: float 3s ease-in-out infinite;
-  }
+/* Secciones */
 
-  @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-  }
+section{
+padding:60px 20px;
+text-align:center;
+}
 
-  /* Botones */
-  button {
-    padding: 12px 20px;
-    background: #8247E5;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
-    color: white;
-    transition: 0.3s;
-  }
+h1{
+color:#8247E5;
+font-size:42px;
+}
 
-  button:hover {
-    background: #6d39c9;
-    transform: scale(1.05);
-  }
+/* Cards */
 
-  </style>
+.card{
+background:rgba(255,255,255,0.05);
+padding:20px;
+margin:20px auto;
+max-width:700px;
+border-radius:12px;
+backdrop-filter:blur(10px);
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* Logo */
+
+.logo{
+width:160px;
+border-radius:12px;
+margin-bottom:20px;
+box-shadow:0 0 25px #8247E5;
+animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0px);}
+}
+
+/* Botones */
+
+button{
+padding:12px 20px;
+background:#8247E5;
+border:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+margin-top:10px;
+color:white;
+transition:0.3s;
+}
+
+button:hover{
+background:#6d39c9;
+transform:scale(1.05);
+}
+
+.contract{
+font-family:monospace;
+font-size:14px;
+margin-top:15px;
+word-break:break-all;
+}
+
+</style>
+
 </head>
-
 
 <body>
 
-<!-- Menú -->
 <nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#tokenomics">Tokenomics</a>
-  <a href="#roadmap">Roadmap</a>
-  <a href="#buy">Buy</a>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#tokenomics">Tokenomics</a>
+<a href="#roadmap">Roadmap</a>
+<a href="#buy">Buy</a>
 </nav>
 
-
-<!-- HOME -->
 <section id="home">
 
-  <img src="https://fuchsia-generous-canid-667.mypinata.cloud/ipfs/bafkreigjteyuuc7343yipcmbl5gvdarijra3hvfsf7gk4zax5zsjalwicm" class="logo">
+<img src="https://fuchsia-generous-canid-667.mypinata.cloud/ipfs/bafkreigjteyuuc7343yipcmbl5gvdarijra3hvfsf7gk4zax5zsjalwicm" class="logo">
 
-  <h1>XMLS.FLASH</h1>
-  <p>Fast • Secure • Decentralized on Polygon</p>
+<h1>XMLS.FLASH</h1>
+
+<p>Fast • Secure • Decentralized on Polygon</p>
 
 </section>
 
-
-<!-- ABOUT -->
 <section id="about">
-  <h2>About</h2>
 
-  <div class="card">
+<h2>About</h2>
 
-    <p>
-      XMLS.FLASH is a decentralized utility token on Polygon designed for fast transactions,
-      efficient liquidity, and transparent on-chain activity.
-    </p>
+<div class="card">
 
-    <p>
-      Metadata and assets are stored on IPFS for decentralized access.
-    </p>
+<p>
+XMLS.FLASH is a decentralized utility token on Polygon designed for fast transactions,
+efficient liquidity and transparent on-chain activity.
+</p>
 
-  </div>
+<p>
+Metadata and assets are stored on IPFS for decentralized access.
+</p>
+
+</div>
+
 </section>
 
-
-<!-- TOKENOMICS -->
 <section id="tokenomics">
 
-  <h2>Tokenomics</h2>
+<h2>Tokenomics</h2>
 
-  <div class="card">
-    <p>Total Supply: 680,000,000</p>
-    <p>Liquidity Active</p>
-    <p>Polygon Network</p>
-  </div>
+<div class="card">
+
+<p>Total Supply: 680,000,000</p>
+<p>Liquidity Active</p>
+<p>Polygon Network</p>
+
+</div>
 
 </section>
 
-
-<!-- ROADMAP -->
 <section id="roadmap">
 
-  <h2>Roadmap</h2>
+<h2>Roadmap</h2>
 
-  <div class="card">
-    <p>Phase 1: Launch</p>
-    <p>Phase 2: Liquidity Growth</p>
-    <p>Phase 3: Listings</p>
-    <p>Phase 4: Expansion</p>
-  </div>
+<div class="card">
+
+<p>Phase 1: Launch</p>
+<p>Phase 2: Liquidity Growth</p>
+<p>Phase 3: Listings</p>
+<p>Phase 4: Expansion</p>
+
+</div>
 
 </section>
 
-
-<!-- BUY TOKEN -->
 <section id="buy">
 
-  <h2>Buy Token</h2>
+<h2>Buy Token</h2>
 
-  <div class="card">
+<div class="card">
 
-    <p>Available on DEX</p>
+<p>Available on DEX</p>
 
-    <!-- Chart -->
-    <a href="https://dexscreener.com/polygon/0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6" target="_blank">
-      <button>View on Dexscreener</button>
-    </a>
+<a href="https://dexscreener.com/polygon/0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6" target="_blank">
+<button>View on Dexscreener</button>
+</a>
 
-    <!-- Comprar -->
-    <a href="https://app.uniswap.org/#/swap?outputCurrency=0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6&chain=polygon" target="_blank">
-      <button>Buy on Uniswap</button>
-    </a>
+<a href="https://app.uniswap.org/#/swap?outputCurrency=0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6&chain=polygon" target="_blank">
+<button>Buy on Uniswap</button>
+</a>
 
-    <!-- Contrato -->
-    <p id="contract">
-      0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6
-    </p>
+<p id="contract" class="contract">
+0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6
+</p>
 
-    <button onclick="copy()">Copy Contract</button>
+<button onclick="copyContract()">Copy Contract</button>
 
-  </div>
+</div>
 
 </section>
-
 
 <script>
 
-function copy() {
+function copyContract(){
 
-  const text = document.getElementById("contract").innerText;
+const text=document.getElementById("contract").innerText;
 
-  navigator.clipboard.writeText(text);
+navigator.clipboard.writeText(text);
 
-  alert("Contract copied!");
+alert("Contract copied!");
 
 }
 
 </script>
 
 </body>
+
 </html>
