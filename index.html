@@ -14,9 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>XMLS.FLASH</title>
-  <button onclick="connectWallet()" class="wallet-btn">
-Connect Wallet
-</button>
+
 <link rel="icon" type="image/png" href="https://xmls-flash.vercel.app/xmlsflash-logo.png">
 <meta property="og:title" content="XMLS.FLASH">
 <meta property="og:description" content="Decentralized utility token on Polygon designed for fast transactions, efficient liquidity and transparent on-chain activity.">
@@ -148,7 +146,9 @@ word-break:break-all;
 <img src="https://fuchsia-generous-canid-667.mypinata.cloud/ipfs/bafkreigjteyuuc7343yipcmbl5gvdarijra3hvfsf7gk4zax5zsjalwicm" class="logo">
 
 <h1>XMLS.FLASH</h1>
-
+  <button onclick="connectWallet()" class="wallet-btn">
+Connect Wallet
+</button>
 <p>Fast • Secure • Decentralized on Polygon</p>
 
 </section>
@@ -229,7 +229,33 @@ Metadata and assets are stored on IPFS for decentralized access.
 </div>
 
 </section>
+<script>
+async function connectWallet() {
 
+if (typeof window.ethereum !== 'undefined') {
+
+try {
+
+const accounts = await window.ethereum.request({
+method: 'eth_requestAccounts'
+});
+
+alert("Wallet connected: " + accounts[0]);
+
+} catch (error) {
+
+console.log(error);
+
+}
+
+} else {
+
+alert("Please install MetaMask");
+
+}
+
+}
+</script>
 </body>
 
 </html>
