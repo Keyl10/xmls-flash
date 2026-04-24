@@ -206,6 +206,7 @@ Metadata and assets are stored on IPFS for decentralized access.
 
 </section>
 
+
 <section id="buy">
 
 <h2>Buy Token</h2>
@@ -221,6 +222,7 @@ Metadata and assets are stored on IPFS for decentralized access.
 <a href="https://app.uniswap.org/#/swap?outputCurrency=0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6&chain=polygon" target="_blank">
 <button>Buy on Uniswap</button>
 </a>
+
 <a href="https://polygonscan.com/token/0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6" target="_blank">
 <button>View on PolygonScan</button>
 </a>
@@ -234,19 +236,23 @@ Metadata and assets are stored on IPFS for decentralized access.
 </div>
 
 </section>
+
+<script src="https://unpkg.com/@walletconnect/web3-provider@1.8.0/dist/umd/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+  
 <script>
 async function connectWallet() {
 
-if (typeof window.ethereum !== 'undefined') {
+if (window.ethereum) {
 
 try {
 
 const accounts = await window.ethereum.request({
-method: 'eth_requestAccounts'
+  method: 'eth_requestAccounts'
 });
 
 const chainId = await window.ethereum.request({
-method: 'eth_chainId'
+  method: 'eth_chainId'
 });
 
 if (chainId !== "0x89") {
@@ -279,7 +285,9 @@ blockExplorerUrls: ['https://polygonscan.com']
 
 }
 
-alert("Wallet connected: " + accounts[0]);
+// UI
+document.querySelector(".wallet-btn").innerText =
+accounts[0].slice(0,6) + "..." + accounts[0].slice(-4);
 
 } catch (error) {
 
@@ -289,15 +297,43 @@ console.log(error);
 
 } else {
 
-alert("Please install MetaMask");
+try {
 
+const provider = new WalletConnectProvider.default({
+  rpc: {
+    137: "https://polygon-rpc.com"
+  },
+  chainId: 137
+});
+
+await provider.enable();
+
+const web3 = new Web3(provider);
+const accounts = await web3.eth.getAccounts();
+
+if (!accounts || !accounts.length) {
+  alert("No wallet connected");
+  return;
 }
 
+document.querySelector(".wallet-btn").innerText =
+accounts[0].slice(0,6) + "..." + accounts[0].slice(-4);
 
+} catch (error) {
 
-
-
+console.log("WalletConnect error:", error);
+alert("Connection cancelled or failed");
+  
 }
+
+}  
+function copyContract() {
+  const contract = document.getElementById("contract").innerText;
+  navigator.clipboard.writeText(contract);
+  alert("Contract copied!");
+}
+
+  
 </script>
 </body>
 
