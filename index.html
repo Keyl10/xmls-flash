@@ -287,7 +287,7 @@ blockExplorerUrls: ['https://polygonscan.com']
 
 // UI
 document.querySelector(".wallet-btn").innerText =
-accounts[0].slice(0,6) + "..." + accounts[0].slice(-4);
+"🟣 Polygon • " + accounts[0].slice(0,6) + "..." + accounts[0].slice(-4);
 
 } catch (error) {
 
@@ -317,7 +317,7 @@ if (!accounts || !accounts.length) {
 }
 
 document.querySelector(".wallet-btn").innerText =
-accounts[0].slice(0,6) + "..." + accounts[0].slice(-4);
+"🟣 Polygon • " + accounts[0].slice(0,6) + "..." + accounts[0].slice(-4);
 
 } catch (error) {
 
@@ -352,7 +352,7 @@ method: "eth_accounts"
 if (accounts.length > 0) {
 
 document.querySelector(".wallet-btn").innerText =
-accounts[0].slice(0,6) + "..." + accounts[0].slice(-4);
+"🟣 Polygon • " + accounts[0].slice(0,6) + "..." + accounts[0].slice(-4);
 
 }
 
