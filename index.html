@@ -329,8 +329,14 @@ alert("Connection cancelled or failed");
 }  
 function copyContract() {
   const contract = document.getElementById("contract").innerText;
-  navigator.clipboard.writeText(contract);
-  alert("Contract copied!");
+
+  navigator.clipboard.writeText(contract)
+  .then(() => {
+    alert("Contract copied!");
+  })
+  .catch(() => {
+    alert("Copy failed");
+  });
 }
 
   
