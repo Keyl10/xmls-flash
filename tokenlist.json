@@ -1,16 +1,19 @@
 {
- "name": "XMLS.FLASH Token List",
- "timestamp": "2026-04-23T00:00:00Z",
- "version": { "major": 1, "minor": 0, "patch": 0 },
- "tokens": [
-  {
-   "chainId": 137,
-   "address": "0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6",
-   "name": "XMLS.FLASH",
-   "symbol": "XMLS.FLASH",
-   "decimals": 8,
-   "logoURI":
-"https://xmls-flash.vercel.app/xmlsflash-logo.png" 
-  }
- ]
+  "name": "XMLS.FLASH Token List",
+  "timestamp": "2026-04-23T00:00:00Z",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "tokens": [
+    {
+      "chainId": 137,
+      "address": "0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6",
+      "name": "XMLS.FLASH",
+      "symbol": "XMLS.FLASH",
+      "decimals": 8,
+      "logoURI": "https://raw.githubusercontent.com/Keyl10/xmls-flash/refs/heads/main/xmlsflash-logo.png"
+    }
+  ]
 }
