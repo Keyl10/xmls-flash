@@ -133,7 +133,43 @@ padding:14px 24px;
 }
 
 </style>
+<!-- Web3Modal (Wallet universal) -->
+<script type="module">
+import { EthereumClient, w3mProvider } from "https://unpkg.com/@web3modal/ethereum@3.0.0/dist/index.js";
+import { Web3Modal } from "https://unpkg.com/@web3modal/html@3.0.0/dist/index.js";
+import { configureChains, createConfig } from "https://unpkg.com/@wagmi/core@1.4.7/dist/index.js";
+import { polygon } from "https://unpkg.com/@wagmi/core@1.4.7/dist/chains.js";
 
+const projectId = "YOUR_WALLETCONNECT_PROJECT_ID"; 
+const chains = [polygon];
+
+const { publicClient } = configureChains(chains, [
+  w3mProvider({ projectId })
+]);
+
+const wagmiConfig = createConfig({
+  autoConnect: true,
+  publicClient
+});
+
+const ethereumClient = new EthereumClient(wagmiConfig, chains);
+
+const web3modal = new Web3Modal(
+  {
+    projectId,
+    themeMode: "dark",
+    themeVariables: {
+      "--w3m-accent-color": "#8247E5"
+    }
+  },
+  ethereumClient
+);
+
+// 👉 ESTA ES TU FUNCIÓN GLOBAL
+window.connectWallet = async function () {
+  await web3modal.openModal();
+};
+</script>
 </head>
 
 <body>
