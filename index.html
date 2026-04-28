@@ -384,24 +384,7 @@ function copyContract() {
 
  window.addEventListener("load", async () => {
 
-if (window.ethereum) {
 
-const accounts = await window.ethereum.request({
-method: "eth_accounts"
-});
-
-if (accounts.length > 0) {
-
-document.querySelector(".wallet-btn").innerText =
-"🟣 Polygon • " + accounts[0].slice(0,6) + "..." + accounts[0].slice(-4);
-
-}
-
-}
-
-});
-
-</script>
 </body>
 
 </html>
