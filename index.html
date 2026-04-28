@@ -152,7 +152,14 @@ const wagmiConfig = createConfig({
   publicClient
 });
 
-const ethereumClient = new EthereumClient(wagmiConfig, chains);
+const metadata = {
+  name: "XMLS.FLASH",
+  description: "XMLS.FLASH Token",
+  url: "https://xmls-flash.vercel.app",
+  icons: ["https://xmls-flash.vercel.app/xmlsflash-logo.png"]
+};
+
+const ethereumClient = new EthereumClient(wagmiConfig, chains, metadata);
 
 const web3modal = new Web3Modal(
   {
