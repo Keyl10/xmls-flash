@@ -135,10 +135,10 @@ padding:14px 24px;
 </style>
 <!-- Web3Modal (Wallet universal) -->
 <script type="module">
-import { EthereumClient, w3mProvider } from "https://unpkg.com/@web3modal/ethereum@3.0.0/dist/index.js";
-import { Web3Modal } from "https://unpkg.com/@web3modal/html@3.0.0/dist/index.js";
-import { configureChains, createConfig } from "https://unpkg.com/@wagmi/core@1.4.7/dist/index.js";
-import { polygon } from "https://unpkg.com/@wagmi/core@1.4.7/dist/chains.js";
+import { EthereumClient, w3mProvider } from "https://esm.sh/@web3modal/ethereum";
+import { Web3Modal } from "https://esm.sh/@web3modal/html";
+import { configureChains, createConfig } from "https://esm.sh/@wagmi/core";
+import { polygon } from "https://esm.sh/@wagmi/core/chains";
 
 const projectId = "9d2b85b86bad8c0b0fb7ff69205e607a"; 
 const chains = [polygon];
