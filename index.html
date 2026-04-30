@@ -2,207 +2,165 @@
 <html lang="en">
 
 <head>
-  <meta name="token-name" content="XMLS.FLASH">
-  <meta name="token-symbol" content="XMLS.FLASH">
-  <meta name="token-chain" content="polygon">
-  <meta name="token-contract" content="0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6">
-
-  <!-- LOGO OFICIAL (ÚNICO) -->
-  <meta name="token-logo" content="https://ivory-wonderful-flyingfish-14.mypinata.cloud/ipfs/bafybeigflpj2zwhsxlynth7jzxx2skq2x32fv4765d5kcxvxlgbgmnqom4">
-
-  <meta name="erc20-contract" content="0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6">
-  <meta name="erc20-symbol" content="XMLS.FLASH">
-  <meta name="erc20-logo" content="https://ivory-wonderful-flyingfish-14.mypinata.cloud/ipfs/bafybeigflpj2zwhsxlynth7jzxx2skq2x32fv4765d5kcxvxlgbgmnqom4">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>XMLS.FLASH</title>
+  <title>XMLS.FLASH | Polygon Token</title>
 
-  <meta name="description" content="XMLS.FLASH decentralized utility token on Polygon for fast transactions and transparent on-chain activity.">
+  <meta name="description" content="XMLS.FLASH decentralized utility token on Polygon for fast transactions, liquidity and transparent on-chain activity.">
+
+  <!-- TOKEN META -->
+  <meta name="token-name" content="XMLS.FLASH">
+  <meta name="token-symbol" content="XMLS">
+  <meta name="token-chain" content="polygon">
+  <meta name="token-contract" content="0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6">
+
+  <!-- TOKEN LIST -->
+  <link rel="tokenlist" href="https://xmls-flash.vercel.app/token-list.json">
 
   <!-- FAVICON -->
-  <link rel="icon" type="image/svg+xml" href="https://ivory-wonderful-flyingfish-14.mypinata.cloud/ipfs/bafybeigflpj2zwhsxlynth7jzxx2skq2x32fv4765d5kcxvxlgbgmnqom4">
+  <link rel="icon" href="/xmlslogo.png">
+  <link rel="icon" type="image/svg+xml" href="/xmlslogo.svg">
 
   <!-- OPEN GRAPH -->
   <meta property="og:title" content="XMLS.FLASH">
-  <meta property="og:description" content="Decentralized utility token on Polygon designed for fast transactions, efficient liquidity and transparent on-chain activity.">
-  <meta property="og:image" content="https://ivory-wonderful-flyingfish-14.mypinata.cloud/ipfs/bafybeigflpj2zwhsxlynth7jzxx2skq2x32fv4765d5kcxvxlgbgmnqom4">
+  <meta property="og:description" content="Decentralized utility token on Polygon">
+  <meta property="og:image" content="https://xmls-flash.vercel.app/xmlslogo.png">
   <meta property="og:url" content="https://xmls-flash.vercel.app">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="XMLS.FLASH">
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="XMLS.FLASH">
+  <meta name="twitter:description" content="Decentralized utility token on Polygon">
+  <meta name="twitter:image" content="https://xmls-flash.vercel.app/xmlslogo.png">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "XMLS.FLASH",
+    "url": "https://xmls-flash.vercel.app",
+    "logo": "https://xmls-flash.vercel.app/xmlslogo.png"
+  }
+  </script>
 
   <style>
-
-
-/* Fondo */
-
-body{
-margin:0;
-font-family:Arial, sans-serif;
-color:white;
-
-
-
-background-image: url("https://ivory-wonderful-flyingfish-14.mypinata.cloud/ipfs/bafybeibondfliiy4uu77rtkn6voibq3aiaj3xqeaw3hdbpc6yfi3ypkhou");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-background-attachment: fixed;
-}
-
-
-nav, section{
-position:relative;
-z-index:1;
-}
-
-/* Efecto luz */
-
-body::before{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.45);
-pointer-events:none;
-z-index:0;
-}
-
-/* Menu */
-
-nav{
-display:flex;
-justify-content:center;
-gap:20px;
-padding:15px;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
-}
-
-nav a{
-color:#8247E5;
-text-decoration:none;
-font-weight:bold;
-}
-
-/* Secciones */
-
-section{
-padding:60px 20px;
-text-align:center;
-}
-
-h1{
-color:#8247E5;
-font-size:42px;
-}
-
-/* Cards */
-
-.card{
-background:rgba(255,255,255,0.05);
-padding:20px;
-margin:20px auto;
-max-width:700px;
-border-radius:12px;
-backdrop-filter:blur(10px);
-box-shadow:0 5px 20px rgba(0,0,0,0.3);
-}
-
-/* Logo */
-
-.logo{
-width:160px;
-border-radius:12px;
-margin-bottom:20px;
-box-shadow:0 0 25px #8247E5;
-animation:float 3s ease-in-out infinite;
-}
-
-@keyframes float{
-0%{transform:translateY(0px);}
-50%{transform:translateY(-10px);}
-100%{transform:translateY(0px);}
-}
-
-/* Botones */
-
-button{
-padding:12px 20px;
-background:#8247E5;
-border:none;
-border-radius:8px;
-font-weight:bold;
-cursor:pointer;
-margin-top:10px;
-color:white;
-transition:0.3s;
-}
-
-button:hover{
-background:#6d39c9;
-transform:scale(1.05);
-}
-
-.contract{
-font-family:monospace;
-font-size:14px;
-margin-top:15px;
-word-break:break-all;
-}
-.wallet-btn{
-margin-top:15px;
-font-size:16px;
-padding:14px 24px;
-}
-
-</style>
-<!-- Web3Modal (Wallet universal) -->
-<script type="module">
-import { EthereumClient, w3mProvider } from "https://esm.sh/@web3modal/ethereum";
-import { Web3Modal } from "https://esm.sh/@web3modal/html";
-import { configureChains, createConfig } from "https://esm.sh/@wagmi/core";
-import { polygon } from "https://esm.sh/@wagmi/core/chains";
-
-const projectId = "9d2b85b86bad8c0b0fb7ff69205e607a"; 
-const chains = [polygon];
-
-const { publicClient } = configureChains(chains, [
-  w3mProvider({ projectId })
-]);
-
-const wagmiConfig = createConfig({
-  autoConnect: true,
-  publicClient
-});
-
-const metadata = {
-  name: "XMLS.FLASH",
-  description: "XMLS.FLASH Token",
-  url: "https://xmls-flash.vercel.app",
- icons: ["https://ivory-wonderful-flyingfish-14.mypinata.cloud/ipfs/bafybeigflpj2zwhsxlynth7jzxx2skq2x32fv4765d5kcxvxlgbgmnqom4"] 
-};
-
-const ethereumClient = new EthereumClient(wagmiConfig, chains, metadata);
-
-const web3modal = new Web3Modal(
-  {
-    projectId,
-    themeMode: "dark",
-    themeVariables: {
-      "--w3m-accent-color": "#8247E5"
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      color:white;
+      background-image: url("https://gateway.pinata.cloud/ipfs/bafybeibondfliiy4uu77rtkn6voibq3aiaj3xqeaw3hdbpc6yfi3ypkhou");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
-  },
-  ethereumClient
-);
 
-// 👉 ESTA ES TU FUNCIÓN GLOBAL
-window.connectWallet = async function () {
-  await web3modal.openModal();
-};
-</script>
+    body::before{
+      content:"";
+      position:fixed;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.45);
+    }
+
+    nav{
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      padding:15px;
+      background:rgba(0,0,0,0.6);
+    }
+
+    nav a{
+      color:#8247E5;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    section{
+      padding:60px 20px;
+      text-align:center;
+    }
+
+    h1{
+      color:#8247E5;
+      font-size:42px;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.05);
+      padding:20px;
+      margin:20px auto;
+      max-width:700px;
+      border-radius:12px;
+    }
+
+    .logo{
+      width:160px;
+      margin-bottom:20px;
+      box-shadow:0 0 25px #8247E5;
+    }
+
+    button{
+      padding:12px 20px;
+      background:#8247E5;
+      border:none;
+      border-radius:8px;
+      font-weight:bold;
+      cursor:pointer;
+      color:white;
+    }
+
+    .contract{
+      font-family:monospace;
+      font-size:14px;
+      margin-top:15px;
+      word-break:break-all;
+    }
+  </style>
+
+  <!-- WEB3 -->
+  <script type="module">
+    import { EthereumClient, w3mProvider } from "https://esm.sh/@web3modal/ethereum";
+    import { Web3Modal } from "https://esm.sh/@web3modal/html";
+    import { configureChains, createConfig } from "https://esm.sh/@wagmi/core";
+    import { polygon } from "https://esm.sh/@wagmi/core/chains";
+
+    const projectId = "9d2b85b86bad8c0b0fb7ff69205e607a"; 
+    const chains = [polygon];
+
+    const { publicClient } = configureChains(chains, [
+      w3mProvider({ projectId })
+    ]);
+
+    const wagmiConfig = createConfig({
+      autoConnect: true,
+      publicClient
+    });
+
+    const metadata = {
+      name: "XMLS.FLASH",
+      description: "XMLS.FLASH Token",
+      url: "https://xmls-flash.vercel.app",
+      icons: ["https://xmls-flash.vercel.app/xmlslogo.png"]
+    };
+
+    const ethereumClient = new EthereumClient(wagmiConfig, chains, metadata);
+
+    const web3modal = new Web3Modal(
+      { projectId, themeMode: "dark" },
+      ethereumClient
+    );
+
+    window.connectWallet = async () => {
+      await web3modal.openModal();
+    };
+  </script>
+
 </head>
 
 <body>
@@ -211,115 +169,45 @@ window.connectWallet = async function () {
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#tokenomics">Tokenomics</a>
-<a href="#roadmap">Roadmap</a>
 <a href="#buy">Buy</a>
 </nav>
 
 <section id="home">
-
- <img src="https://ivory-wonderful-flyingfish-14.mypinata.cloud/ipfs/bafybeigflpj2zwhsxlynth7jzxx2skq2x32fv4765d5kcxvxlgbgmnqom4" class="logo">
+<img src="/xmlslogo.png" class="logo">
 <h1>XMLS.FLASH</h1>
-  <button onclick="connectWallet()" class="wallet-btn">
-Connect Wallet
-</button>
+<button onclick="connectWallet()">Connect Wallet</button>
 <p>Fast • Secure • Decentralized on Polygon</p>
-
 </section>
 
 <section id="about">
-
-<h2>About</h2>
-
 <div class="card">
-
-<p>
-XMLS.FLASH is a decentralized utility token on Polygon designed for fast transactions,
-efficient liquidity and transparent on-chain activity.
-</p>
-
-<p>
-Metadata and assets are stored on IPFS for decentralized access.
-</p>
-
+<p>XMLS.FLASH is a decentralized utility token on Polygon.</p>
 </div>
-
 </section>
 
 <section id="tokenomics">
-
-<h2>Tokenomics</h2>
-
 <div class="card">
-
 <p>Total Supply: 680,000,000</p>
-<p>Liquidity Active</p>
-<p>Polygon Network</p>
-
 </div>
-
 </section>
-
-<section id="roadmap">
-
-<h2>Roadmap</h2>
-
-<div class="card">
-
-<p>Phase 1: Launch</p>
-<p>Phase 2: Liquidity Growth</p>
-<p>Phase 3: Listings</p>
-<p>Phase 4: Expansion</p>
-
-</div>
-
-</section>
-
 
 <section id="buy">
-
-<h2>Buy Token</h2>
-
 <div class="card">
 
-<p>Available on DEX</p>
-
 <a href="https://dexscreener.com/polygon/0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6" target="_blank">
-<button>View on Dexscreener</button>
+<button>Dexscreener</button>
 </a>
 
 <a href="https://app.uniswap.org/#/swap?outputCurrency=0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6&chain=polygon" target="_blank">
-<button>Buy on Uniswap</button>
+<button>Buy</button>
 </a>
 
-<a href="https://polygonscan.com/token/0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6" target="_blank">
-<button>View on PolygonScan</button>
-</a>
-  
-<p id="contract" class="contract">
+<p class="contract">
 0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6
 </p>
 
-<button onclick="copyContract()">Copy Contract</button>
-
 </div>
-
 </section>
-<script>
-function copyContract() {
-  const contract = document.getElementById("contract").innerText;
-
-  navigator.clipboard.writeText(contract)
-  .then(() => {
-    alert("Contract copied!");
-  })
-  .catch(() => {
-    alert("Copy failed");
-  });
-}
-</script>
- 
-
 
 </body>
-
 </html>
