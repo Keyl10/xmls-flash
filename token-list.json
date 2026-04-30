@@ -1,6 +1,6 @@
 {
   "name": "XMLS.FLASH Token List",
-  "timestamp": "2026-04-29T00:00:00Z",
+  "timestamp": "2026-04-28T00:00:00Z",
   "version": {
     "major": 1,
     "minor": 0,
@@ -14,7 +14,7 @@
       "name": "XMLS.FLASH",
       "symbol": "XMLS",
       "decimals": 8,
-      "logoURI": "https://ivory-wonderful-flyingfish-14.mypinata.cloud/ipfs/bafkreiavwzclzksmvs77mothg2qbnx6eb5kkv2qqjqmk2qlbqduq7sx6ty"
+      "logoURI": "https://gateway.pinata.cloud/ipfs/bafkreiavwzclzksmvs77mothg2qbnx6eb5kkv2qqjqmk2qlbqduq7sx6ty"
     }
   ]
 }
