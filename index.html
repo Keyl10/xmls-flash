@@ -7,7 +7,7 @@
 
   <title>XMLS.FLASH | Polygon Token</title>
 
-  <meta name="description" content="XMLS.FLASH decentralized utility token on Polygon for fast transactions, liquidity and transparent on-chain activity.">
+  <meta name="description" content="XMLS.FLASH is a high-performance utility token on Polygon, enabling fast transactions, efficient liquidity, and transparent on-chain execution within a scalable multi-chain ecosystem.">
 
   <!-- TOKEN META -->
   <meta name="token-name" content="XMLS.FLASH">
@@ -24,7 +24,7 @@
 
   <!-- OPEN GRAPH -->
   <meta property="og:title" content="XMLS.FLASH">
-  <meta property="og:description" content="Decentralized utility token on Polygon">
+  <meta property="og:description" content="High-performance utility token on Polygon">
   <meta property="og:image" content="https://xmls-flash.vercel.app/xmlslogo.png">
   <meta property="og:url" content="https://xmls-flash.vercel.app">
   <meta property="og:type" content="website">
@@ -33,7 +33,7 @@
   <!-- TWITTER -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="XMLS.FLASH">
-  <meta name="twitter:description" content="Decentralized utility token on Polygon">
+  <meta name="twitter:description" content="High-performance utility token on Polygon">
   <meta name="twitter:image" content="https://xmls-flash.vercel.app/xmlslogo.png">
 
   <!-- JSON-LD -->
@@ -62,9 +62,12 @@
     body::before{
       content:"";
       position:fixed;
+      top:0;
+      left:0;
       width:100%;
       height:100%;
       background:rgba(0,0,0,0.45);
+      pointer-events:none;
     }
 
     nav{
@@ -113,6 +116,7 @@
       font-weight:bold;
       cursor:pointer;
       color:white;
+      margin-top:10px;
     }
 
     .contract{
@@ -175,19 +179,29 @@
 <section id="home">
 <img src="/xmlslogo.png" class="logo">
 <h1>XMLS.FLASH</h1>
+
+<p>Fast • Liquid • On-Chain</p>
+
+<p>
+XMLS.FLASH is a high-performance utility token on Polygon, designed for fast execution, efficient liquidity, and transparent on-chain operations within a scalable multi-chain ecosystem.
+</p>
+
 <button onclick="connectWallet()">Connect Wallet</button>
-<p>Fast • Secure • Decentralized on Polygon</p>
 </section>
 
 <section id="about">
 <div class="card">
-<p>XMLS.FLASH is a decentralized utility token on Polygon.</p>
+<p>
+XMLS.FLASH is a decentralized utility token on Polygon with metadata and assets stored on IPFS for transparent and censorship-resistant access.
+</p>
 </div>
 </section>
 
 <section id="tokenomics">
 <div class="card">
 <p>Total Supply: 680,000,000</p>
+<p>Network: Polygon</p>
+<p>Liquidity: Active</p>
 </div>
 </section>
 
@@ -199,15 +213,31 @@
 </a>
 
 <a href="https://app.uniswap.org/#/swap?outputCurrency=0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6&chain=polygon" target="_blank">
-<button>Buy</button>
+<button>Buy on Uniswap</button>
+</a>
+
+<a href="https://polygonscan.com/token/0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6" target="_blank">
+<button>View on PolygonScan</button>
 </a>
 
 <p class="contract">
 0x3cd79b7dbbd4fb3e776ec7030109b376e3aCAbd6
 </p>
 
+<button onclick="copyContract()">Copy Contract</button>
+
 </div>
 </section>
+
+<script>
+function copyContract() {
+  const contract = document.querySelector(".contract").innerText;
+
+  navigator.clipboard.writeText(contract)
+  .then(() => alert("Contract copied!"))
+  .catch(() => alert("Copy failed"));
+}
+</script>
 
 </body>
 </html>
